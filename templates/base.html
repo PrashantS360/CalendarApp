@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Events App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Imperial+Script&family=Island+Moments&family=Kenia&family=Macondo&family=Moon+Dance&family=Oooh+Baby&family=Roboto+Condensed&family=Smooch&family=Teko&family=Vujahday+Script&display=swap');
+
+        * {
+            font-family: 'Baloo 2', cursive;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        img{
+            position: fixed;
+            z-index: -10;
+            width: 100vw;
+        }
+        .container h1{
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        a{
+            font-size: 2rem;
+            color: burlywood;
+        }
+
+        .calendar-container{
+            background-color: rgb(35, 35, 35);
+        }
+
+        .calendar-heading {
+            padding-top: 5vh;
+            font-size: 3rem;
+            color: white;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .events-container {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 40px;
+            flex-wrap: wrap;
+
+        }
+
+        .card {
+            width: 22rem;
+            height: 15rem;
+            margin: 15px 15px;
+            border: 3px solid bisque;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 5px rgb(249, 243, 235);
+            padding: 10px 12px;
+            background-color: rgb(254, 236, 214);
+        }
+
+        .card-header {
+            height: 15%;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 10px 0;
+            height: 70%;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+        }
+
+        .status {
+            float: right;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    {% block content %}{% endblock content %}
+</body>
+
+</html>

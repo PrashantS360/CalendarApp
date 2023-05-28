@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="calendar-container">
+  <h1 class="calendar-heading">Calendar Events</h1>
+  <div class="events-container">
+    {% for event in events %}
+    <div class="card text-bg-primary mb-3">
+      <div class="card-header">{{ event.summary}}</div>
+      <div class="card-body">
+        Created By - <h5 class="card-title"> {{event.creator.email}}</h5>
+        Location - <p class="card-text"> {{event.location}}</p>
+      </div>
+      Status : <span class="status"> {{event.status}}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
